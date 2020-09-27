@@ -1,0 +1,10 @@
+.example6 {
+    /* container with relative position */
+    position: relative;
+}
+
+.example6 img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
