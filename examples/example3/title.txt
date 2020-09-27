@@ -1,1 +1,1 @@
-Horizontal centering display:grid + justify-content
+Horizontal centering with display:grid + justify-content

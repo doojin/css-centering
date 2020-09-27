@@ -1,1 +1,1 @@
-Horizontal centering display:flex + justify-content
+Horizontal centering with display:flex + justify-content
