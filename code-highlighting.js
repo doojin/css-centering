@@ -12,13 +12,15 @@ async function run() {
   while (true) {
     const markup = await fetch(`examples/example${example}/markup.html`);
     const styles = await fetch(`examples/example${example}/styles.css`);
+    const title = await fetch(`examples/example${example}/title.txt`);
 
-    if (!markup.ok || !styles.ok) {
+    if (!markup.ok || !styles.ok || !title.ok) {
       break;
     }
 
     const htmlContent = await markup.text();
     const cssContent = await styles.text();
+    const titleContent = await title.text();
 
     const htmlCode = document.createElement('code');
     htmlCode.innerHTML = htmlContent;
@@ -47,12 +49,20 @@ async function run() {
     rightColumn.innerHTML = htmlContent;
     rightColumn.appendChild(style);
 
+    const header = document.createElement('h1');
+    header.innerText = titleContent;
+
     const sample = document.createElement('div');
     sample.classList.add('sample');
     sample.appendChild(leftColumn);
     sample.appendChild(rightColumn);
 
-    document.querySelector('.content').appendChild(sample);
+    const sampleWrapper = document.createElement('div');
+    sampleWrapper.classList.add('sample-wrapper');
+    sampleWrapper.appendChild(header);
+    sampleWrapper.appendChild(sample);
+
+    document.querySelector('.content').appendChild(sampleWrapper);
 
     codeReplacements.forEach(replacement => {
       htmlCode.innerHTML = htmlCode.innerHTML.replace(replacement.from, replacement.to);

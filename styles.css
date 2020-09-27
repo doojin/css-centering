@@ -6,7 +6,7 @@ pre:not(:last-child) {
     margin-bottom: 1rem;
 }
 
-code {
+h1, code {
     font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
 }
 
@@ -22,7 +22,7 @@ code {
     grid-template-columns: 40% 60%;
 }
 
-.sample:not(:first-child) {
+.sample-wrapper:not(:first-child) {
     margin-top: 5rem;
 }
 
