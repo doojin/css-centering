@@ -22,6 +22,10 @@ code {
     grid-template-columns: 40% 60%;
 }
 
+.sample:not(:first-child) {
+    margin-top: 5rem;
+}
+
 .right {
     border: solid 1px gray;
 }
