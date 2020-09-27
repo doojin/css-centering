@@ -1,1 +1,1 @@
-Horizontal centering with auto margin
+Horizontal centering with automatic margin
