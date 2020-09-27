@@ -1,0 +1,11 @@
+.example8 {
+    height: 100%;
+    /* container position is relative */
+    position: relative;
+}
+
+.example8 img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
