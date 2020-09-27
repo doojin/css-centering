@@ -1,0 +1,11 @@
+.example5 .elements-wrapper {
+    /* wrapper should have fixed width */
+    width: 400px;
+    display: flex;
+    margin: 0 auto;
+}
+
+.example5 .elements-wrapper img {
+    /* centered elements too */
+    width: 150px;
+}
