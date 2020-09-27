@@ -10,6 +10,8 @@ h1, code {
     font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
 }
 
+h1 { text-align: center; }
+
 .content {
     width: 1200px;
     margin: 0 auto;
